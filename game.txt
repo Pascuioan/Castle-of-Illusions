@@ -1,0 +1,274 @@
+#rooms
+States:
+Entrance Hall
+Dining Room , S
+Kitchen
+Armoury
+Treasury
+Library
+Pantry
+Throne Room
+Wizard's Study
+Secret Exit , F
+End
+
+#commands
+Sigma:
+Entrance Hall
+Dining Room
+Kitchen
+Armoury
+Treasury
+Library
+Pantry
+Throne Room
+Wizard's Study
+Secret Exit
+drop key
+drop invitation
+drop chef's hat
+drop spoon
+drop sword
+drop crown
+drop ancient coin
+drop spell book
+drop magic wand
+take key
+take invitation
+take chef's hat
+take spoon
+take sword
+take crown
+take ancient coin
+take spell book
+take magic wand
+End
+
+#items
+SigmaS:
+key
+invitation
+chef's hat
+spoon
+sword
+crown
+ancient coin
+spell book
+magic wand
+End
+
+#transitions / actions
+Delta:
+
+#movement
+Pantry , Kitchen , chef's hat := Kitchen , epsilon , epsilon
+Kitchen , Pantry , spoon := Pantry , epsilon , epsilon
+Kitchen , Dining Room , epsilon := Dining Room , epsilon , epsilon
+Dining Room , Kitchen , chef's hat := Kitchen , epsilon , epsilon
+Dining Room , Entrance Hall , invitation := Entrance Hall , epsilon , epsilon
+Entrance Hall , Dining Room , epsilon := Dining Room , epsilon , epsilon
+Dining Room , Treasury , sword := Treasury , epsilon , epsilon
+Treasury , Dining Room , epsilon := Dining Room , epsilon , epsilon
+Entrance Hall , Armoury , key := Armoury , epsilon , epsilon
+Armoury , Entrance Hall , invitation := Entrance Hall , epsilon , epsilon
+Armoury , Treasury , sword := Treasury , epsilon , epsilon
+Treasury , Armoury , key := Armoury , epsilon , epsilon
+Armoury , Throne Room , crown := Throne Room , epsilon , epsilon
+Throne Room , Armoury , key := Armoury , epsilon , epsilon
+Throne Room , Wizard's Study , spell book := Wizard's Study , epsilon , epsilon
+Wizard's Study , Throne Room , crown := Throne Room , epsilon , epsilon
+Wizard's Study , Treasury , sword := Treasury , epsilon , epsilon
+Treasury , Wizard's Study , spell book := Wizard's Study , epsilon , epsilon
+Treasury , Library , ancient coin := Library , epsilon , epsilon
+Library , Treasury , sword := Treasury , epsilon , epsilon
+Library , Secret Exit , magic wand := Secret Exit , epsilon , epsilon
+Secret Exit , Library , ancient coin := Library , epsilon , epsilon
+Wizard's Study , Secret Exit , magic wand := Secret Exit , epsilon , epsilon
+Secret Exit , Wizard's Study , spell book := Wizard's Study , epsilon , epsilon
+
+
+#drop commands
+Entrance Hall , drop key , key := Entrance Hall , key , epsilon
+Entrance Hall , drop invitation , invitation := Entrance Hall , invitation , epsilon
+Entrance Hall , drop chef's hat , chef's hat := Entrance Hall , chef's hat , epsilon
+Entrance Hall , drop spoon , spoon := Entrance Hall , spoon , epsilon
+Entrance Hall , drop sword , sword := Entrance Hall , sword , epsilon
+Entrance Hall , drop crown , crown := Entrance Hall , crown , epsilon
+Entrance Hall , drop ancient coin , ancient coin := Entrance Hall , ancient coin , epsilon
+Entrance Hall , drop spell book , spell book := Entrance Hall , spell book , epsilon
+Entrance Hall , drop magic wand , magic wand := Entrance Hall , magic wand , epsilon
+Dining Room , drop key , key := Dining Room , key , epsilon
+Dining Room , drop invitation , invitation := Dining Room , invitation , epsilon
+Dining Room , drop chef's hat , chef's hat := Dining Room , chef's hat , epsilon
+Dining Room , drop spoon , spoon := Dining Room , spoon , epsilon
+Dining Room , drop sword , sword := Dining Room , sword , epsilon
+Dining Room , drop crown , crown := Dining Room , crown , epsilon
+Dining Room , drop ancient coin , ancient coin := Dining Room , ancient coin , epsilon
+Dining Room , drop spell book , spell book := Dining Room , spell book , epsilon
+Dining Room , drop magic wand , magic wand := Dining Room , magic wand , epsilon
+Kitchen , drop key , key := Kitchen , key , epsilon
+Kitchen , drop invitation , invitation := Kitchen , invitation , epsilon
+Kitchen , drop chef's hat , chef's hat := Kitchen , chef's hat , epsilon
+Kitchen , drop spoon , spoon := Kitchen , spoon , epsilon
+Kitchen , drop sword , sword := Kitchen , sword , epsilon
+Kitchen , drop crown , crown := Kitchen , crown , epsilon
+Kitchen , drop ancient coin , ancient coin := Kitchen , ancient coin , epsilon
+Kitchen , drop spell book , spell book := Kitchen , spell book , epsilon
+Kitchen , drop magic wand , magic wand := Kitchen , magic wand , epsilon
+Armoury , drop key , key := Armoury , key , epsilon
+Armoury , drop invitation , invitation := Armoury , invitation , epsilon
+Armoury , drop chef's hat , chef's hat := Armoury , chef's hat , epsilon
+Armoury , drop spoon , spoon := Armoury , spoon , epsilon
+Armoury , drop sword , sword := Armoury , sword , epsilon
+Armoury , drop crown , crown := Armoury , crown , epsilon
+Armoury , drop ancient coin , ancient coin := Armoury , ancient coin , epsilon
+Armoury , drop spell book , spell book := Armoury , spell book , epsilon
+Armoury , drop magic wand , magic wand := Armoury , magic wand , epsilon
+Treasury , drop key , key := Treasury , key , epsilon
+Treasury , drop invitation , invitation := Treasury , invitation , epsilon
+Treasury , drop chef's hat , chef's hat := Treasury , chef's hat , epsilon
+Treasury , drop spoon , spoon := Treasury , spoon , epsilon
+Treasury , drop sword , sword := Treasury , sword , epsilon
+Treasury , drop crown , crown := Treasury , crown , epsilon
+Treasury , drop ancient coin , ancient coin := Treasury , ancient coin , epsilon
+Treasury , drop spell book , spell book := Treasury , spell book , epsilon
+Treasury , drop magic wand , magic wand := Treasury , magic wand , epsilon
+Library , drop key , key := Library , key , epsilon
+Library , drop invitation , invitation := Library , invitation , epsilon
+Library , drop chef's hat , chef's hat := Library , chef's hat , epsilon
+Library , drop spoon , spoon := Library , spoon , epsilon
+Library , drop sword , sword := Library , sword , epsilon
+Library , drop crown , crown := Library , crown , epsilon
+Library , drop ancient coin , ancient coin := Library , ancient coin , epsilon
+Library , drop spell book , spell book := Library , spell book , epsilon
+Library , drop magic wand , magic wand := Library , magic wand , epsilon
+Pantry , drop key , key := Pantry , key , epsilon
+Pantry , drop invitation , invitation := Pantry , invitation , epsilon
+Pantry , drop chef's hat , chef's hat := Pantry , chef's hat , epsilon
+Pantry , drop spoon , spoon := Pantry , spoon , epsilon
+Pantry , drop sword , sword := Pantry , sword , epsilon
+Pantry , drop crown , crown := Pantry , crown , epsilon
+Pantry , drop ancient coin , ancient coin := Pantry , ancient coin , epsilon
+Pantry , drop spell book , spell book := Pantry , spell book , epsilon
+Pantry , drop magic wand , magic wand := Pantry , magic wand , epsilon
+Throne Room , drop key , key := Throne Room , key , epsilon
+Throne Room , drop invitation , invitation := Throne Room , invitation , epsilon
+Throne Room , drop chef's hat , chef's hat := Throne Room , chef's hat , epsilon
+Throne Room , drop spoon , spoon := Throne Room , spoon , epsilon
+Throne Room , drop sword , sword := Throne Room , sword , epsilon
+Throne Room , drop crown , crown := Throne Room , crown , epsilon
+Throne Room , drop ancient coin , ancient coin := Throne Room , ancient coin , epsilon
+Throne Room , drop spell book , spell book := Throne Room , spell book , epsilon
+Throne Room , drop magic wand , magic wand := Throne Room , magic wand , epsilon
+Wizard's Study , drop key , key := Wizard's Study , key , epsilon
+Wizard's Study , drop invitation , invitation := Wizard's Study , invitation , epsilon
+Wizard's Study , drop chef's hat , chef's hat := Wizard's Study , chef's hat , epsilon
+Wizard's Study , drop spoon , spoon := Wizard's Study , spoon , epsilon
+Wizard's Study , drop sword , sword := Wizard's Study , sword , epsilon
+Wizard's Study , drop crown , crown := Wizard's Study , crown , epsilon
+Wizard's Study , drop ancient coin , ancient coin := Wizard's Study , ancient coin , epsilon
+Wizard's Study , drop spell book , spell book := Wizard's Study , spell book , epsilon
+Wizard's Study , drop magic wand , magic wand := Wizard's Study , magic wand , epsilon
+Secret Exit , drop key , key := Secret Exit , key , epsilon
+Secret Exit , drop invitation , invitation := Secret Exit , invitation , epsilon
+Secret Exit , drop chef's hat , chef's hat := Secret Exit , chef's hat , epsilon
+Secret Exit , drop spoon , spoon := Secret Exit , spoon , epsilon
+Secret Exit , drop sword , sword := Secret Exit , sword , epsilon
+Secret Exit , drop crown , crown := Secret Exit , crown , epsilon
+Secret Exit , drop ancient coin , ancient coin := Secret Exit , ancient coin , epsilon
+Secret Exit , drop spell book , spell book := Secret Exit , spell book , epsilon
+Secret Exit , drop magic wand , magic wand := Secret Exit , magic wand , epsilon
+
+#take commands
+
+Entrance Hall , take key , epsilon := Entrance Hall , epsilon , key
+Entrance Hall , take invitation , epsilon := Entrance Hall , epsilon , invitation
+Entrance Hall , take chef's hat , epsilon := Entrance Hall , epsilon , chef's hat
+Entrance Hall , take spoon , epsilon := Entrance Hall , epsilon , spoon
+Entrance Hall , take sword , epsilon := Entrance Hall , epsilon , sword
+Entrance Hall , take crown , epsilon := Entrance Hall , epsilon , crown
+Entrance Hall , take ancient coin , epsilon := Entrance Hall , epsilon , ancient coin
+Entrance Hall , take spell book , epsilon := Entrance Hall , epsilon , spell book
+Entrance Hall , take magic wand , epsilon := Entrance Hall , epsilon , magic wand
+Dining Room , take key , epsilon := Dining Room , epsilon , key
+Dining Room , take invitation , epsilon := Dining Room , epsilon , invitation
+Dining Room , take chef's hat , epsilon := Dining Room , epsilon , chef's hat
+Dining Room , take spoon , epsilon := Dining Room , epsilon , spoon
+Dining Room , take sword , epsilon := Dining Room , epsilon , sword
+Dining Room , take crown , epsilon := Dining Room , epsilon , crown
+Dining Room , take ancient coin , epsilon := Dining Room , epsilon , ancient coin
+Dining Room , take spell book , epsilon := Dining Room , epsilon , spell book
+Dining Room , take magic wand , epsilon := Dining Room , epsilon , magic wand
+Kitchen , take key , epsilon := Kitchen , epsilon , key
+Kitchen , take invitation , epsilon := Kitchen , epsilon , invitation
+Kitchen , take chef's hat , epsilon := Kitchen , epsilon , chef's hat
+Kitchen , take spoon , epsilon := Kitchen , epsilon , spoon
+Kitchen , take sword , epsilon := Kitchen , epsilon , sword
+Kitchen , take crown , epsilon := Kitchen , epsilon , crown
+Kitchen , take ancient coin , epsilon := Kitchen , epsilon , ancient coin
+Kitchen , take spell book , epsilon := Kitchen , epsilon , spell book
+Kitchen , take magic wand , epsilon := Kitchen , epsilon , magic wand
+Armoury , take key , epsilon := Armoury , epsilon , key
+Armoury , take invitation , epsilon := Armoury , epsilon , invitation
+Armoury , take chef's hat , epsilon := Armoury , epsilon , chef's hat
+Armoury , take spoon , epsilon := Armoury , epsilon , spoon
+Armoury , take sword , epsilon := Armoury , epsilon , sword
+Armoury , take crown , epsilon := Armoury , epsilon , crown
+Armoury , take ancient coin , epsilon := Armoury , epsilon , ancient coin
+Armoury , take spell book , epsilon := Armoury , epsilon , spell book
+Armoury , take magic wand , epsilon := Armoury , epsilon , magic wand
+Treasury , take key , epsilon := Treasury , epsilon , key
+Treasury , take invitation , epsilon := Treasury , epsilon , invitation
+Treasury , take chef's hat , epsilon := Treasury , epsilon , chef's hat
+Treasury , take spoon , epsilon := Treasury , epsilon , spoon
+Treasury , take sword , epsilon := Treasury , epsilon , sword
+Treasury , take crown , epsilon := Treasury , epsilon , crown
+Treasury , take ancient coin , epsilon := Treasury , epsilon , ancient coin
+Treasury , take spell book , epsilon := Treasury , epsilon , spell book
+Treasury , take magic wand , epsilon := Treasury , epsilon , magic wand
+Library , take key , epsilon := Library , epsilon , key
+Library , take invitation , epsilon := Library , epsilon , invitation
+Library , take chef's hat , epsilon := Library , epsilon , chef's hat
+Library , take spoon , epsilon := Library , epsilon , spoon
+Library , take sword , epsilon := Library , epsilon , sword
+Library , take crown , epsilon := Library , epsilon , crown
+Library , take ancient coin , epsilon := Library , epsilon , ancient coin
+Library , take spell book , epsilon := Library , epsilon , spell book
+Library , take magic wand , epsilon := Library , epsilon , magic wand
+Pantry , take key , epsilon := Pantry , epsilon , key
+Pantry , take invitation , epsilon := Pantry , epsilon , invitation
+Pantry , take chef's hat , epsilon := Pantry , epsilon , chef's hat
+Pantry , take spoon , epsilon := Pantry , epsilon , spoon
+Pantry , take sword , epsilon := Pantry , epsilon , sword
+Pantry , take crown , epsilon := Pantry , epsilon , crown
+Pantry , take ancient coin , epsilon := Pantry , epsilon , ancient coin
+Pantry , take spell book , epsilon := Pantry , epsilon , spell book
+Pantry , take magic wand , epsilon := Pantry , epsilon , magic wand
+Throne Room , take key , epsilon := Throne Room , epsilon , key
+Throne Room , take invitation , epsilon := Throne Room , epsilon , invitation
+Throne Room , take chef's hat , epsilon := Throne Room , epsilon , chef's hat
+Throne Room , take spoon , epsilon := Throne Room , epsilon , spoon
+Throne Room , take sword , epsilon := Throne Room , epsilon , sword
+Throne Room , take crown , epsilon := Throne Room , epsilon , crown
+Throne Room , take ancient coin , epsilon := Throne Room , epsilon , ancient coin
+Throne Room , take spell book , epsilon := Throne Room , epsilon , spell book
+Throne Room , take magic wand , epsilon := Throne Room , epsilon , magic wand
+Wizard's Study , take key , epsilon := Wizard's Study , epsilon , key
+Wizard's Study , take invitation , epsilon := Wizard's Study , epsilon , invitation
+Wizard's Study , take chef's hat , epsilon := Wizard's Study , epsilon , chef's hat
+Wizard's Study , take spoon , epsilon := Wizard's Study , epsilon , spoon
+Wizard's Study , take sword , epsilon := Wizard's Study , epsilon , sword
+Wizard's Study , take crown , epsilon := Wizard's Study , epsilon , crown
+Wizard's Study , take ancient coin , epsilon := Wizard's Study , epsilon , ancient coin
+Wizard's Study , take spell book , epsilon := Wizard's Study , epsilon , spell book
+Wizard's Study , take magic wand , epsilon := Wizard's Study , epsilon , magic wand
+Secret Exit , take key , epsilon := Secret Exit , epsilon , key
+Secret Exit , take invitation , epsilon := Secret Exit , epsilon , invitation
+Secret Exit , take chef's hat , epsilon := Secret Exit , epsilon , chef's hat
+Secret Exit , take spoon , epsilon := Secret Exit , epsilon , spoon
+Secret Exit , take sword , epsilon := Secret Exit , epsilon , sword
+Secret Exit , take crown , epsilon := Secret Exit , epsilon , crown
+Secret Exit , take ancient coin , epsilon := Secret Exit , epsilon , ancient coin
+Secret Exit , take spell book , epsilon := Secret Exit , epsilon , spell book
+Secret Exit , take magic wand , epsilon := Secret Exit , epsilon , magic wand
+End

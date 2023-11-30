@@ -1,0 +1,3 @@
+<command> ::= "go" <room> | "look" | "inventory" | "take" <item> | "drop" <item>
+<room> ::= "Entrance Hall" | "Dining Room" | "Kitchen" | "Armoury" | "Treasury" | "Library" | "Pantry" | "Throne Room" | "Wizard's Study" | "Secret Exit"
+<item> ::= "key" | "invitation" | "chef's hat" | "spoon" | "sword" | "crown" | "ancient coin" | "spell book" | "magic wand"
