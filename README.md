@@ -4,4 +4,4 @@ A text based dungeon crawler where you have to escape the Castle of Illusions. I
 
 ## Installation
 
-Simply clone the repo using `git clone https://github.com/Pascuioan/Castle-of-Illusions` or download the [source code](https://github.com/Pascuioan/Castle-of-Illusions/archive/refs/tags/final.zip) then run the command `pyhton ./Game.py` inside the game folder.
+Simply clone the repo using `git clone https://github.com/Pascuioan/Castle-of-Illusions` or download the [source code](https://github.com/Pascuioan/Castle-of-Illusions/archive/refs/tags/final.zip) then run the command `python ./Game.py` inside the game folder.
